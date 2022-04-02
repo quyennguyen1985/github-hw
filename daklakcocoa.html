@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to the House of Cocoa 🏚</title>
+<style>
+    h1 {
+        color: #411a00;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-align: center;
+        font-size: 50px;
+        margin: 0 auto;
+    }
+    h2 {
+      text-align: center;  
+      color: #ffe389e1;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 20px;
+    }
+    .wholeBody {
+        background-image: linear-gradient(to top, #a57547, #e2931d ,#f1b73a);
+        border: 30px;
+        border-radius: 10px;
+        margin: 20px auto;
+    }
+    button {
+        color: white;
+        background: #58310d;
+        border: 1px solid #411a00;
+        border-radius: 5px;
+        display: block;
+        padding: 20px;
+        margin: 20px auto;
+        box-shadow: 5px 5px 6px #94551a;
+        font-size: 20px;
+        transition: all 100ms ease-in-out;
+        border: none;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    button:hover{
+        background: #ca935f;
+        color: black;
+        cursor: pointer;
+    }
+    .coder{
+        color:#754a08;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: lighter;
+        font-size: 15px;
+    }
+    img {
+        border-radius: 20px;
+        display: block;
+        margin: 0 auto;
+    }
+    .wholeBody {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px 70px;
+    }
+    p {
+        color: #522500;
+        line-height: 1.8;
+        font-size: 18px;
+        margin: 50px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    strong {
+        text-decoration: underline;
+        text-align: center;
+        font-size: 23px;
+    }
+    .vid {
+        color: #7e5025;
+        font-size: 15px;
+    }
+    span {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <div class="wholeBody">
+        <h1>
+            HOUSE OF COCOA
+        </h1>
+        <h2>
+            🌾 PURE WONDER FROM VIET FARMERS TO THE WORLD! 🌾
+        </h2>
+        <hr />
+        <br />  
+            <img src="https://www.worldcocoafoundation.org/wp-content/uploads/2018/07/homepage-3-1600x832.jpg" alt="Cacao seeds" width="500" />
+        <p>
+                <strong>
+                    How cocoa seeds are collected in DakLak 🌾
+                </strong>
+            <br />
+                Along with coffee, fruits and rubber, cocoa plays an important part in Daklak's economy.
+                Pods containing cocoa beans grow from the trunk and branches of the cocoa tree. 
+                <span> Harvesting </span> involves <span> removing ripe pods from the trees </span>
+                and <span> opening them to extract the wet beans </span>. The pods are harvested manually by making a <span> clean cut through the stalk </span> with a <span> well sharpened blade. </span>
+            <br />
+                <a href="https://www.youtube.com/watch?v=AFxhNEk7J_w" target="_blank" class="vid">
+                    >>> How Daklak people harvest and produce cocoa  
+                </a>
+            <br />
+                <strong>
+                    From House of Cocoa to Homes 🏡🤎
+                </strong>
+            <br />
+                We proudly bring Daklak's original elite to your home! 
+                Coming to our House, we have <span> 2 main best-selling products: <em> Cocoa powder </em> and <em> handmade Chocolate! </em> </span> 
+        </p>
+        <button class = "buyCocoa">
+            Now I want some cocoa!
+        </button>
+        <p class="coder">
+            Presented by Quyen Nguyen
+        </p>
+    </div>
+    <script>
+        function buy() {
+            let name = prompt("How can we call you?");
+            let email = prompt ("Can we have your email address?");
+            let product = prompt ("Which of our products would you want to buy (cocoa powder or chocolate)?");
+            if (product === "chocolate" || product === "Chocolate" || product === "CHOCOLATE") {
+                let taste = prompt ("How bitter would you want your chocolate to be?");
+                let emoji = ("🍫");
+                alert (
+                    "Thank you, " + name + "! More details of your purchase order will be sent to you via email soon " + emoji + "🤎"  
+                );
+            } else {
+                let emoji = ("☕");
+                alert (
+                    "Thank you, " + name + "! More details of your purchase order will be sent to you via email soon " + emoji + "🤎"
+                );
+            }
+        }
+        let buyCocoa = document.querySelector(".buyCocoa");
+        buyCocoa.addEventListener("click", buy);
+    </script>
+</body>
+</html>
